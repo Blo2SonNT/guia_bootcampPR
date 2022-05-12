@@ -1,0 +1,57 @@
+.accordion-button:not(.collapsed) {
+    background-color: #fff;
+}
+
+.h-fit {
+    height: fit-content;
+}
+
+code {
+    background-color: #dbcb0c;
+    padding: 6px 20px;
+    margin-left: 10px;
+}
+
+.ruta_angular {
+    background-color: #40df23;
+    color: #000;
+    font-weight: bold;
+    padding: 6px 20px;
+    margin-left: 10px;
+}
+
+.nombre_archivo {
+    font-style: italic;
+    color: #0089ff;
+    font-weight: bolder;
+    background: #bad6e1;
+    padding: 2px 15px;
+}
+
+.lista-carpetas span {
+    cursor: pointer;
+    transition: all 0.5s;
+}
+
+.lista-carpetas span:hover {
+    background-color: #2faf19;
+}
+
+.recordatorio {
+    background-color: #0ff2c8;
+    padding: 6px 20px;
+    font-style: italic;
+    text-decoration: underline;
+}
+
+.bg-verde-chillon {
+    background-color: #33ff00;
+}
+
+.bg-advertencia-mas-delante {
+    background-color: #d49cd2;
+}
+
+.bg-morado {
+    background-color: #9e82d1;
+}

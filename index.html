@@ -1,0 +1,385 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Seguimiento MEAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Seguimiento MEAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">FrontEnd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=J1rtCgoSaqg">BackEnd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="https://www.youtube.com/watch?v=J1rtCgoSaqg">Integracion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h2 class="text-white">Instalacion y configuracion ANGULAR</h2>
+        <div class="accordion" id="acordeon_general">
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-1" aria-expanded="false" aria-controls="contenidoPanel-1">
+                        <b>Instalacion ANGULAR y Creacion de proyecto</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-1" class="accordion-collapse collapse" aria-labelledby="panel-1">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+
+                            <li class="list-group-item">Descarga de <b>NodeJS</b></li>
+                            <li class="list-group-item">
+                                Instalar Angular CLI - comando <code>npm install -g @angular/cli</code> <br>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img src="img/Comando-instalacion-angular.png" class="h-fit w-50 my-2">
+                                    <a class="" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon1" aria-expanded="false" aria-controls="acordeon1">
+                                        Ventana completa CMD
+                                    </a>
+                                </div>
+                                <div class="collapse" id="acordeon1">
+                                    <div class="card card-body bg-secondary">
+                                        <img src="img/instalacion-angular-cli.png" class="w-100">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Creacion de carpeta</li>
+                            <li class="list-group-item">Ubicacion de terminal en carpeta</li>
+                            <li class="list-group-item">
+                                Crear proyecto ANGULAR - comando <code>ng new nombre_proyecto</code> <br>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img src="img/comando-creacion-proyecto-angular.png" class="h-fit w-50 my-2">
+                                    <a class="" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon2" aria-expanded="false" aria-controls="acordeon2">
+                                        Ventana completa CMD
+                                    </a>
+                                </div>
+                                <div class="collapse" id="acordeon2">
+                                    <div class="card card-body bg-secondary">
+                                        <img src="img/creacion-proyecto-angular.png" class="w-100">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Abrir proyecto VS</li>
+                            <li class="list-group-item">
+                                Ejecutar proyecto - comando <code>ng serve --o</code>
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <img src="img/comando-ng-serve.png" class="h-fit w-50 my-2">
+                                    <a class="" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon3" aria-expanded="false" aria-controls="acordeon3">
+                                        Ventana completa CMD
+                                    </a>
+                                </div>
+                                <div class="collapse" id="acordeon3">
+                                    <div class="card card-body bg-secondary">
+                                        <img src="img/ng-serve.png" class="w-100">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p>Editar contenido alojado en <span class="ruta_angular">src/app/app.component.html</span></p>
+                                    <a class="" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon4" aria-expanded="false" aria-controls="acordeon4">
+                                        Vista carpetas
+                                    </a>
+                                </div>
+                                <div class="collapse" id="acordeon4">
+                                    <div class="card card-body bg-secondary">
+                                        <img src="img/ruta_componente_inicial.png" class="w-25">
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">Editar el contenido del componente para crear el HOLA MUNDO</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-2">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-2" aria-expanded="false" aria-controls="contenidoPanel-2">
+                        <b>Configuracion Bootstrap</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-2" class="accordion-collapse collapse" aria-labelledby="panel-2">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">
+                                Ejecutar NPM de bootstrap para instalarlo en el proyecto
+                                <code>npm install bootstrap</code><br>
+                                <img src="img/install-bootstrap.png" class="w-75 my-2">
+                            </li>
+                            <li class="list-group-item">
+                                Verificar el package.json<br>
+                                <img src="img/packaje.json-bootstrap.png" class="w-50 my-2">
+                            </li>
+                            <li class="list-group-item">
+                                <p class="mb-2">
+                                    Llamar dependencia de bootstrap <span class="nombre_archivo">(bootstrap.min.css)</span> de la ruta de node_modules configurandolo en el archivo <span class="nombre_archivo">(angular.json)</span> ubicado en la raiz del
+                                    proyecto
+                                </p>
+                                <code>"node_modules/bootstrap/dist/css/bootstrap.min.css"</code> <br>
+                                <img src="img/modificacion-angular.json-bootstrap.png" class="w-50 my-2">
+                            </li>
+                            <li class="list-group-item">Ejecutar servidor y comprobar que tome el bootstrap</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-3">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-3" aria-expanded="false" aria-controls="contenidoPanel-3">
+                        <b>Continuacion de creacion de arquitectura FRONT-END angular</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-3" class="accordion-collapse collapse" aria-labelledby="panel-3">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Explicacion sobre estrucutra de componente principal</li>
+                            <li class="list-group-item">
+                                Creacion de carpetas dentro de <span class="ruta_angular">app</span>
+                                <ul class="lista-carpetas ">
+                                    <li class="my-3 user-select-none">
+                                        <span class="ruta_angular" data-bs-toggle="popover" title="Para que sirve?" data-bs-content="La carpeta components nos permitira guardar los componentes/paginas futuras de nuestra aplicacion">app/components</span>
+                                    </li>
+                                    <li class="my-3 user-select-none">
+                                        <span class="ruta_angular" data-bs-toggle="popover" title="Para que sirve?" data-bs-content="La carpeta service nos permitira guardar las peticiones http al backend, reutilizar codigo y tener la comunicacion de datos entre componentes">app/services</span>
+                                    </li>
+                                    <li class="my-3 user-select-none">
+                                        <span class="ruta_angular" data-bs-toggle="popover" title="Para que sirve?" data-bs-content="La carpeta models nos permitira guardar el unico modelo de nuestra web">app/models</span>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <div class="d-flex justify-content-between">
+                                    <p>Generar el primer componente - comando
+                                        <code>ng g c components/crear-producto</code>
+                                    </p>
+                                    <div>
+                                        <a class="mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon5" aria-expanded="false" aria-controls="acordeon5">
+                                            Ventana completa CMD
+                                        </a>
+                                        <a class="" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon6" aria-expanded="false" aria-controls="acordeon6">
+                                            Vista carpetas
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="img/ng-generate-component.png" class="w-100 mb-4">
+                                <div class="row">
+                                    <div class="col-9">
+                                        <div class="collapse" id="acordeon5">
+                                            <div class="card card-body bg-secondary">
+                                                <img src="img/ng-generate-component-angular.png" class="w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-3">
+                                        <div class="collapse" id="acordeon6">
+                                            <div class="card card-body bg-secondary">
+                                                <img src="img/nuevo-componente.png" class="w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item">
+                                Rectificar el <span class="nombre_archivo">(app.module.ts)</span> ubicado en <span class="ruta_angular">app</span> <br> En este archivo se agrego el nuevo componente
+                                <br>
+                                <img src="img/nuevo-modulo-app.module.png" class="w-25">
+                            </li>
+                            <li class="list-group-item">Realizar el mismo proceso pero con <b>listar-productos</b></li>
+                            <li class="list-group-item bg-advertencia-mas-delante">
+                                <div class="d-flex justify-content-between">
+                                    <p>Generar el primer servicio - comando
+                                        <code>ng g s services/producto</code>
+                                    </p>
+                                    <div>
+                                        <a class="mx-3" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon7" aria-expanded="false" aria-controls="acordeon7">
+                                            Ventana completa CMD
+                                        </a>
+                                        <a class="" type="button" data-bs-toggle="collapse" data-bs-target="#acordeon8" aria-expanded="false" aria-controls="acordeon8">
+                                            Vista carpetas
+                                        </a>
+                                    </div>
+                                </div>
+                                <img src="img/ng-g-service-comando.png" class="w-100 mb-4">
+                                <div class="row">
+                                    <div class="col-8">
+                                        <div class="collapse" id="acordeon7">
+                                            <div class="card card-body bg-secondary">
+                                                <img src="img/ng-g-service.png" class="w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-4">
+                                        <div class="collapse" id="acordeon8">
+                                            <div class="card card-body bg-secondary">
+                                                <img src="img/nuevo-service.png" class="w-100">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="list-group-item bg-advertencia-mas-delante">
+                                <p class="mb-2">Crear modelo MANUALMENTE en la carpeta <span class="ruta_angular">app/models</span></p>
+                                <img src="img/modelo-nuevo.png" class="w-50">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <p>Crear modelo para el producto, que se disparara al momento de ingresar, editar, consultar o eliminar un producto</p>
+                                    <a class="btn btn-link" data-bs-toggle="collapse" href="#acordeon9" role="button" aria-expanded="false" aria-controls="acordeon9">
+                                        Vista de codigo
+                                    </a>
+                                </div>
+                                <div class="collapse" id="acordeon9">
+                                    <div class="card card-body">
+                                        <code>
+                                            export class Producto{ <br>
+                                                _id?: number; <br>
+                                                nombre: string; <br>
+                                                categoria: string; <br>
+                                                ubicacion: string; <br>
+                                                precio: number; <br>
+                                            <br>
+                                                constructor(nombre: string, categoria:string, ubicacion: string, precio: number){ <br>
+                                                    this.nombre = nombre; <br>
+                                                    this.categoria = categoria; <br>
+                                                    this.ubicacion = ubicacion; <br>
+                                                    this.precio = precio; <br>
+                                                } <br>
+                                            }
+                                        </code>
+                                    </div>
+                                </div>
+                                <img src="img/producto.ts.png" class="w-50">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-4">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-4" aria-expanded="false" aria-controls="contenidoPanel-4">
+                        <b>Configuracion de rutas</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-4" class="accordion-collapse collapse" aria-labelledby="panel-4">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">
+                                <p>Ir al archivo <span class="nombre_archivo">app/app-routing.module.ts</span></p>
+                                <p>En este archivo lo que se realizara es configurar las rutas (URL) para que el usuario pueda acceder a los componentes de la aplicacion.</p>
+                                <div class="row">
+                                    <div class="col-10">
+                                        <p>
+                                            - En <code>const routes: Routes = [];</code> (linea 4 inicialmente) agregar los path para el acceso teniendo en cuenta la importacion de los componentes
+                                            <br><small class="recordatorio"><b>CrearProductoComponent</b> se reutilizara
+                                                para ambas funcionalidades (crear - editar)</small>
+                                        </p>
+                                    </div>
+                                    <div class="col-2">
+                                        <a class="btn btn-link" data-bs-toggle="collapse" href="#acordeon10" role="button" aria-expanded="false" aria-controls="acordeon10">
+                                            Vista de codigo
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="collapse" id="acordeon10">
+                                    <div class="card card-body">
+                                        <code>
+                                            import { ListarProductosComponent } from './components/listar-productos/listar-productos.component'; <br>
+                                            import { CrearProductoComponent } from './components/crear-producto/crear-producto.component'; <br>
+                                            <br>
+                                            const routes: Routes = [ <br>
+                                                { path: '', component: ListarProductosComponent }, <br>
+                                                { path: 'crear-producto', component: CrearProductoComponent }, <br>
+                                                { path: 'editar-producto/:id', component: CrearProductoComponent }, <br>
+                                                { path: '**', redirectTo: '', pathMatch: 'full' }
+                                            ];<br>
+                                        </code>
+                                    </div>
+                                </div>
+                                <img src="img/app-routing-1.png" class="w-100">
+                            </li>
+                            <li class="list-group-item">
+                                <p>Ir al archivo <span class="nombre_archivo">app/app.component.html</span></p>
+                                <p>
+                                    En este archivo colocar la directiva de Angular
+                                    <code> &#60;router-outlet&#62;&#60;/router-outlet&#62; </code> <br><br>
+                                    <small class="recordatorio">Aqui se puede dividir el codigo para tener mas
+                                        orden</small>
+                                </p>
+                                <img src="img/router-outlet.png" class="w-100">
+                            </li>
+                            <li class="list-group-item">Crear vistas para el CRUD</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="bg-white">
+
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+        <h2 class="text-white">Creacion FRONT-END</h2>
+        <div class="accordion" id="acordeon_general">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-5">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-5" aria-expanded="false" aria-controls="contenidoPanel-5">
+                        <b>Creacion de vistas</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-5" class="accordion-collapse collapse" aria-labelledby="panel-5">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">Creacion de vista para listar los productos <span class="nombre_archivo">app/componets/listar-producto/listar-producto.component.html</span>
+                            </li>
+                            <li class="list-group-item">
+                                Configurar <b class="text-danger fw-bold">RouterLink</b> <br> Esta es una directiva de Angular que nos permite crear una redireccion sin necesidad de la etiqueta a
+                                <img src="img/ejemplo-router-link.png" class="w-100" alt="">
+                            </li>
+                            <li class="list-group-item">Creacion de vista para crear los productos <span class="nombre_archivo">app/componets/crear-producto/crear-producto.component.html</span>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+
+</html>
