@@ -23,10 +23,10 @@
                         <a class="nav-link" href="index.html">FrontEnd</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.youtube.com/watch?v=J1rtCgoSaqg">BackEnd</a>
+                        <a class="nav-link" href="backend.html">BackEnd</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="https://www.youtube.com/watch?v=J1rtCgoSaqg">Integracion</a>
+                        <a class="nav-link" href="integracion.html">Integracion</a>
                     </li>
                 </ul>
             </div>
@@ -369,7 +369,150 @@
                     </div>
                 </div>
             </div>
-
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-6">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-6" aria-expanded="false" aria-controls="contenidoPanel-6">
+                        <b>Configuracion de formularios reactivos</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-6" class="accordion-collapse collapse" aria-labelledby="panel-6">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">
+                                Dirigirse al archivo <span class="nombre_archivo">app/app.module.ts</span> para importar el modulo de <b class="text-danger">reactive form</b> de Angular
+                                <br><img src="img/app,module-ubicacion.png" class="mt-3">
+                            </li>
+                            <li class="list-group-item">
+                                Editar las opciones de importacion <code>imports: []</code> donde se llamara la dependencia de <b class="text-danger">ReactiveFormsModule</b> <br>
+                                <img src="img/edit-app.module-reactive-formmodule.png" class="w-100 mt-3" alt="">
+                            </li>
+                            <li class="list-group-item">
+                                Dirigirse a <span class="nombre_archivo">app/componets/crear-producto/crear-producto.component.ts</span>
+                            </li>
+                            <li class="list-group-item">
+                                Importar la dependencia para empezar a utilizar los formularios reactivos
+                                <ul>
+                                    <li>
+                                        <small class="text-secondary">Dara error, es normal</small> <br> - Crear una variable y darle la propiedad <code>productoForm: FormGroup</code> <br>
+                                        <small>Tener en cuenta que se importe la libreria nuevamente en el
+                                            documento</small>
+                                        <img src="img/paso1-uso-del-formgroup.png" class="w-100" alt="">
+                                    </li>
+                                    <li class="mt-4">
+                                        - Inyectar en el metodo constructor la llamada a la dependencia de reactive forms <br> - Armar el metodo constructor para validar los campos del formulario
+                                        <br>
+                                        <p>tener en cuenta que en este paso es donde se indica que se debe validar</p>
+                                        <p>Tambien tener en cuenta que si se quiere validar mas de una condicion se debe de encerrar las validaciones dentro de un array, <b>Se muestra en la imagen
+                                                linea 15</b></p>
+                                        <p>Se crea el <b>metodo</b> que recibira la informacion del formulario para mostrar en este caso el console.log</p>
+                                        <img src="img/paso2-uso-del-formgroup.png" class="w-100">
+                                        <a href="https://www.tutorialesprogramacionya.com/angularya/detalleconcepto.php?punto=93&codigo=93&inicio=80" target="_blank">Una ayuda a ser necesario</a>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    Modificar la vista del formulario para indicarle por medio de un <b class="text-danger">Property Binding</b> que le daremos las propiedades que estamos validando por medio del <b>ReactiveForms</b>
+                                </p>
+                                <br>
+                                <h5>Tener en cuenta que se agregaron las siguientes propiedades</h5>
+                                <ul>
+                                    <li>
+                                        <code>[formGroup]="productoForm"</code> en la etiqueta form
+                                    </li>
+                                    <li>
+                                        <code>formControlName="producto"</code> en cada uno de los imput que creamos donde le damos el nombre que colocamos en la clase en el metodo constructor <br>
+                                    </li>
+                                    <li>
+                                        Se agrego el <code>type='submit'</code> en el boton de guardar
+                                    </li>
+                                    <li>
+                                        Se creo la propiedad de angular <code>(ngSubmit)="agregarProducto()"</code> para hacer el envio de los datos contenidos en el formulario a la hora de enviar alguna informacion
+                                    </li>
+                                    <li>
+                                        <img src="img/paso3-uso-del-formgroup.png" class="w-100">
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                <p>Crear la funcion que se creo en <code>(ngSubmit)="agregarProducto()"</code> en el archivo <span class="nombre_archivo">app/componets/crear-producto/crear-producto.component.ts</span>
+                                </p> <br>
+                                <img src="/img/paso4-uso-del-formgroup.png" alt="">
+                            </li>
+                            <li class="list-group-item bg-verde-chillon">
+                                <p>Validar de que el formulario esta cumpliendo la funcionalidad</p>
+                            </li>
+                            <li class="list-group-item">
+                                <p>empezar a agregar los respectivos mensajes de validacion para cada input en <span class="nombre_archivo">app/componets/crear-producto/crear-producto.component.html</span>
+                                </p> <br>
+                                <img src="img/paso5-uso-del-formgroup.png" class="w-100" alt="">
+                            </li>
+                            <li class="list-group-item">
+                                <p>Empezar a controlar los mensajes de error para el formulario para que aparezcan y desaparezcan
+                                </p>
+                                <p>Crear condicional de angular en el mensaje de validacion <span class="text-danger">*ngIf=""</span> haciendo el control sobre el objeto que arroja el formulario al enviar la informacion</p> <br>
+                                <h5>Objeto que imprime el formulario</h5>
+                                <img src="img/resultado-formulario-formgroup.png" class="w-75" alt="">
+                                <br>
+                                <h5>Armar el condicional respecto valor de la key controls y la key touched</h5>
+                                <p>Controls ------> key || almacena los campos que tienen control de la info ingresada por el usuario</p>
+                                <p>Touched -----> key || almacena si el usuario ya le dio click o interactuo con el campo
+                                </p>
+                                <img src="img/paso6-uso-del-formgroup.png" class="w-100" alt="">
+                            </li>
+                            <li class="list-group-item bg-verde-chillon">
+                                Comprobar formulario
+                            </li>
+                            <li class="list-group-item">
+                                Comprobar el console log que esta generando el programa para acceder a los valores dados por el usuario
+                                <img src="img/formgroup-captura_datos.png" class="w-50" alt="">
+                            </li>
+                            <li class="list-group-item">
+                                <p>Acceder a un elemento especifico de la data ingresada por el usuario <br> Toca agregar el console.log al metodo de la clase que esta capturando la info</p>
+                                <img src="img/captura_dato_especifico_ts.png" class="w-50">
+                            </li>
+                            <li class="list-group-item bg-advertencia-mas-delante">
+                                <h4>La creacion del modelo y el servicio esta mas arriba en la seccion <br> <span class="text-success text-decoration-underline">Continuacion de creacion de
+                                        arquitectura FRONT-END angular <br> Punto 6 y 7</span> </h4>
+                                <p>Capturar la info basandose en el MODELO para crear el objeto del nuevo dato que sera enviado a la base de datos</p>
+                                <img src="img/creacion-objeto-nuevo-dato.png" class="w-100" alt="">
+                            </li>
+                            <li class="list-group-item bg-verde-chillon">
+                                comprobar que se este armando el objeto de manera correcta mediante el console log mandado a hacer en el <span class="nombre_archivo">crear-producto.component.ts</span>
+                                <img src="img/resultado-consola-creacion-objeto-nuevo-dato.png" class="w-100" alt="">
+                            </li>
+                            <li class="list-group-item">
+                                Redireccionar al usuario despues de crear el registro por medio del TS
+                                <ul>
+                                    <li>
+                                        Importar libreria Router de angular en el <span class="nombre_archivo">crear-producto.component.ts</span>
+                                        <img src="img/importacion-router-en-componente.png" class="w-75" alt="">
+                                    </li>
+                                    <li>
+                                        Crear la instruccion de redireccion despues de crear el nuevo registro <br>
+                                        <img src="img/linea-router-en-ts.png" class="w-50" alt="">
+                                    </li>
+                                    <li>Comprobar que funcione (Tiene que mostrar el componente que hubieramos indicado)
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="list-group-item">
+                                Agregar alerta a la hora de crear el nuevo registro
+                                <ul>
+                                    <li>
+                                        Importar la libreria de sweetalert en el componente <br>
+                                        <img src="img/importacion-sweetalert.png" class="w-50 border">
+                                    </li>
+                                    <li>
+                                        Agregar alerta en el COMPONENTE indicando el registro del nuevo dato <br>
+                                        <img src="img/configuracion-alerta-sweetalert-nuevo-registro.png" class="w-50">
+                                    </li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
