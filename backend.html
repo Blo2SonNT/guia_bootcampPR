@@ -107,6 +107,22 @@
             </div>
 
             <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <b>Creación del servidor y ejecucion del proyecto</b>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <li>
+                            Empezar con la creacion del servidor donde se define en el archivo <span class="nombre_archivo">index.js</span> de la siguiente manera <br>
+                            <img src="img/back/levantar-configurar-servidor-1.png" alt="" class="w-100 pt-4">
+                            <img src="img/back/servidor-resp-1.png" alt="" class="w-50 pb-4">
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
                 <h2 class="accordion-header" id="headingThree">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
                         <b>MongoDB</b>
@@ -163,8 +179,169 @@
                     </div>
                 </div>
             </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <b>Express - MongoDB</b>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                Crear una base de datos donde se almacenara la informacion y una coleccion para la informacion
+                                <ul>
+                                    <li><code>use nombre_base_datos</code></li>
+                                </ul>
+                            </li>
+                            <li>Ejecutar el proyecto express con el comando <code>npm run dev</code></li>
+                            <li>Instalar la extension llamada <b>dotENV</b> en el visual</li>
+                            <li>
+                                Crear un nuevo archivo llamado <span class="nombre_archivo">config.env</span> <br>
+                                <img src="img/back/express-1.png" class="w-50 my-3" alt="">
+                            </li>
+                            <li>
+                                Agregar una variable en el archivo <span class="nombre_archivo">config.env</span> nueva donde se configurara el acceso al cluster de mongo <br>
+                                <img src="img/back/express-2.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                Crear una carpeta nueva llamada <span class="nombre_archivo">config</span> <br>
+                                <img src="img/back/express-3.png" class="w-25 my-3" alt="">
+                            </li>
+                            <li>
+                                Crear un archivo nuevo llamado <span class="nombre_archivo">db.js</span> en la ruta <span class="ruta_angular">/config</span> donde se realizara la configuracion respectiva para realizar la conexion a la base de datos <br>
+                                <img src="img/back/express-5.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                Llamamos el archivo <span class="nombre_archivo">db.js</span> en el <span class="nombre_archivo">index.js</span> <br>
+                                <p>Llamamos la funcion que conecta a la base de datos</p> <br>
+                                <img src="img/back/express-6.png" class="w-100 my-3" alt="">
+                            </li>
+                            <h4><b>Configuracion de rutas</b></h4>
+                            <li>
+                                Crear una carpeta llamada <span class="nombre_archivo">routes</span> <br>
+                                <img src="img/back/express-7.png" class="w-25 my-3" alt="">
+                            </li>
+                            <li>
+                                Crear un archivo con el nombre que deseemos, para el ejemplo se usara <span class="nombre_archivo">producto.js</span> <br>
+                                <p class="mt-2">La ruta queda de la siguiente manera <span class="ruta_angular">routes/producto.js</span></p>
+                                <img src="img/back/express-8.png" class="w-25 my-3" alt="">
+                            </li>
+                            <li>
+                                Del <span class="nombre_archivo">index.js</span> retiraremos la ruta que configuramos para la creacion del proyecto <br>
+                                <img src="img/back/express-9.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                Creamos la logica que ira en el archivo de rutas haciendo referencia a los productos <br>
+                                <img src="img/back/express-10.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                importamos la ruta en el index.js <br>
+                                <img src="img/back/express-11.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                testeamos la ruta usando el software de postman. <br>
+                                <b>Si lo testeamos por medio de la aplicacion web se debe de descargar el agente postman para poder hacer las respectivas peticiones</b> <br>
+                                <b>Si se instala no se debe de ejecutar nada extra para el funcionamiento del postman</b> <br>
+                                <img src="img/back/express-12.png" class="w-100 my-3" alt="">
+                            </li>
+                            <h5 class="p-3 bg-primary text-white text-center">Mejorando los procesos que se llevaran en las rutas</h5>
+                            <li>
+                                Crear una carpeta <span class="nombre_archivo">controllers</span> <br>
+                                <img src="img/back/express-13.png" class="w-25 my-3" alt="">
+                            </li>
+                            <li>
+                                En la carpeta controllers crear un archivo <span class="nombre_archivo">productoController.js</span> <br>
+                                <img src="img/back/express-14.png" class="w-25 my-3" alt="">
+                            </li>
+                            <li>
+                                En el archivo de <span class="nombre_archivo">productoController.js</span> crear la logica para controlar los respectivos que se encargaran de gestionar las peticiones de la api
+                                <img src="img/back/express-15.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                En el archivo de la ruta <span class="ruta_angular">routes/producto.js</span> modificar la ruta e importar el controlador para poder gestionar las peticiones por sepaarado <br>
+                                <img src="img/back/express-16.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                Testear por medio del postman para rectificar la respuesta dada en consola <br>
+                                <img src="img/back/express-17.png" class="w-50 my-3" alt="">
+                            </li>
+                            <h4>Enviando datos a travez del controlador a mongo</h4>
+                            <li>
+                                Habilitamos en <span class="nombre_archivo">index.js</span> para poder recibir json en el proyecto, con el fin de recibir la informacion dada por medio del postman o el proyecto de front <br>
+                                <img src="img/back/express-18.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                En <span>productoController.js</span> hacemos un <code>console.log(req.body);</code> para visualizar la informacion recibida por medio del postman <br>
+                                <img src="img/back/express-21.png" class="w-100 my-3" alt="">
+                                <div class="bg-morado p-5 my-4">
+                                    <h5>Configuracion postman</h5>
+                                    - Tener en cuenta la ruta configurada en el <span class="nombre_archivo">index.js</span><br>
+                                    <img src="img/back/express-22.png" class="w-75 my-3" alt=""> <br>
+                                    <p> - Metodo HTTP: POST <br> - En el <b>body</b> seleccionar <b>raw</b> y seleccionar <b>JSON</b> para mandar la informacion. <br></p>
+                                    <img src="img/back/express-19.png" class="w-100 my-3" alt="">
+                                </div>
+                                - Evidenciar la informacion recibida por medio de la consola <br>
+                                <img src="img/back/express-20.png" class="w-50 my-3" alt="">
 
-
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headiFive">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <b>Configuracion de modelo - MongooseJS</b>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                Crear una carpeta en el proyecto llamada <span class="ruta_angular">models</span> <br>
+                                <img src="img/back/express-23.png" alt="" class="w-25 my-3"> <br>
+                            </li>
+                            <li>
+                                Crear un archivo llamado <span class="nombre_archivo">Producto.js</span> <b class="text-decoration-underline">Con la inicial en mayuscula donde se indica que es un modelo</b> <br>
+                                <img src="img/back/express-24.png" alt="" class="w-50 my-3"> <br>
+                            </li>
+                            <li>
+                                Declaramos en <span class="nombre_archivo">Producto.js</span> <b>Modelo de express</b> una variable para requerir los servicios de mongoose, declaramos un esquema que definira los campos que seran recibidos para guardar
+                                en la base de datos y exportamos el modelo para su uso en otros componentes de la API <br>
+                                <img src="img/back/express-25.png" alt="" class="w-100 my-3">
+                            </li>
+                            <li>
+                                Declaramos el esquema dentro de <code>const ProductoSchema = mongoose.Schema({})</code> <br>
+                                <p class="my-3">Deben de llamarse igual que como los definimos en el modelo de <span class="text-danger fw-bold">angular</span> (<span class="ruta_angular">src/app/models/producto.ts</span>)<br></p>
+                                <img src="img/back/express-26.png" alt="" class="w-100 my-3">
+                            </li>
+                            <li>
+                                En el controlador del producto <span class="ruta_angular">controllers/<span class="nombre_archivo">productosController.js</span></span> empezaremos a dar respuesta segun el estado de las peticiones <br>
+                                <img src="img/back/express-27.png" class="w-100 my-3" alt="">
+                            </li>
+                            <h5 class="p-3 bg-primary text-white text-center">Pruebas para guardar la info en la base de datos</h5>
+                            <div class="bg-morado p-5 my-4">
+                                <h4 class="fw-bold mb-3">Configuracion postman para test POST</h4>
+                                <img src="img/back/express-28.png" class="w-100" alt="">
+                            </div>
+                            <h4>Obtener los productos</h4>
+                            <li>
+                                agregamos un nuevo metodo al controlador <span class="nombre_archivo">productoController.js</span> para consultar los productos de la base de datos <br>
+                                <img src="img/back/express-29.png" class="w-100 my-3" alt="">
+                            </li>
+                            <li>
+                                agregamos ruta o endpoint en el archivo <span class="nombre_archivo">producto.js</span> de la ruta <span class="ruta_angular">routes/producto.js</span> que nos permitira acceder por medio del metodo HTTP que se escoja <br>
+                                <img src="img/back/express-30.png" alt="" class="w-100 my-3">
+                            </li>
+                            <div class="bg-morado p-5 my-4">
+                                <h4 class="fw-bold mb-3">Configuracion postman para test GET</h4>
+                                <img src="img/back/express-31.png" class="w-100" alt="">
+                            </div>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
