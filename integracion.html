@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Seguimiento MEAN</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Seguimiento MEAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">FrontEnd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="backend.html">BackEnd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="integracion.html">Integracion</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h2 class="text-white">Integracion servicio express con angular</h2>
+        <div class="accordion" id="accordionExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
+                        <b>Listar data - Integracion de Front con Back</b>
+                    </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <b>(FRONT)</b> Importar en <span class="nombre_archivo">app.module.ts</span> la libreria de http<br>
+                                <img src="img/integracion/int-1.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Creacion de metodos en el servicio del modulo <span class="ruta_angular">services/<span class="nombre_archivo">producto.service.ts</span></span> <br>
+                                <img src="img/integracion/int-2.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b class="text-danger">Este paso dara un error de CORS -  se soluciona en el siguiente paso</b> <br>
+                                <b>(FRONT)</b> Llamado del metodo creado en servicio para obtener los productos en el ts ( <span class="nombre_archivo">listar-productos.component.ts</span> ) del componente encargado <br>
+                                <img src="img/integracion/int-3.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>Solucion del error de CORS</b> <br>
+                                <b>(BACK)</b> En el proyecto instalar una nueva dependencia <code>npm i cors</code>
+                                <img src="img/integracion/int-4.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(BACK)</b> En <span class="nombre_archivo">index.js</span> importar la dependencia de CORS e indicarle que dejara la comunicacion entre servicios <br>
+                                <img src="img/integracion/int-5.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Realizar la prueba cargando el modulo correspondiente <br>
+                                <img src="img/integracion/int-6.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> En <span class="nombre_archivo">listar-productos.componet.ts</span> generar un nuevo atributo de clase de tipo producto donde se guardara la data recibida del back <br>
+                                <img src="img/integracion/int-7.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> En <span class="nombre_archivo">listar-productos.component.html</span> realizar la iteracion para mostrar la data en pantalla <br>
+                                <img src="img/integracion/int-8.png" class="w-100 mt-4">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                        <b>Eliminar Data - Integracion Front con Back</b>
+                    </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <li>
+                            <b>(FRONT)</b> En <span class="nombre_archivo">producto.service.ts</span> realizar el metodo correspondiente para eliminar el dato de la base de datos <br>
+                            <img src="img/integracion/int-9.png" class="w-100 mt-4">
+                        </li>
+                        <li class="mt-3">
+                            <b>(FRONT)</b> En <span class="nombre_archivo">listar-productos.componetn.ts</span> agregar el metodo que se ejecutara cuando el usuario haga clic en el boton de eliminar. <br>
+                            <p>Tener en cuenta que en este se ejecutara el sweetalert</p>
+                            <br>
+                            <img src="img/integracion/int-10.png" class="w-100 mt-4">
+                        </li>
+                        <li class="mt-3">
+                            <b>(FRONT)</b> Agregar funcionalidad al boton de eliminar<br>
+                            <img src="img/integracion/int-11.png" class="w-100 mt-4"> <br>
+                            <img src="img/integracion/int-12.png" class="w-100 mt-4">
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                        <b>Crear data - Integracion Front con Back</b>
+                    </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <b>(FRONT)</b> Crear el metodo en el servicio ( <span class="nombre_archivo">producto.service.ts</span> ) teniendo en cuenta que se debera de importar el modelo del modulo para guardar la respectiva informacion mas adelante
+                                <br>
+                                <img src="img/integracion/int-13.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Llamar el servicio en <span class="nombre_archivo">crear-producto.component.ts</span> dentro del contructor para poder usar los metodos importando el servicio como tal<br>
+                                <img src="img/integracion/int-14.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Modificar el metodo para guardar la informacion donde se le agregara el servicio para hacer el respectivo llamado a la api <br>
+                                <img src="img/integracion/int-15.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Realizar la respectiva prueba del guardado de la data <br>
+                                <img src="img/integracion/int-16.png" class="w-100 mt-4">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <b>Actualizar data - Integracion Front con Back</b>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ul>
+                            <li>
+                                <b>(FRONT)</b> Generar el metodo en el servicio <span class="nombre_archivo">producto.service.ts</span> que se encargara de obtener el dato especifico <br>
+                                <img src="img/integracion/int-17.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Agregar al boton de editar <span class="nombre_archivo">listar-productos.component.html</span> la ruta con el respectivo id del dato teniendo en cuenta el path declarado en <span class="nombre_archivo">app-routing.module.ts</span>
+                                <br>
+                                <img src="img/integracion/int-18.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Hacer la prueba <br>
+                                <img src="img/integracion/int-19.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Crear una variable en <span class="nombre_archivo">crear-producto.component.ts</span> que controlara el titulo del formulario de manera dinamica segun la accion a realizar <br>
+                                <img src="img/integracion/int-20.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Dirigirse a <span class="nombre_archivo">crear-producto.component.html</span> para cambiar el titulo estatico a dinamico <br>
+                                <img src="img/integracion/int-21.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Importar modulo <code>ActivatedRoute</code> en <span class="nombre_archivo">crear-producto.component.ts</span> y declarar un nuevo atributo llamado <code>id</code> que accedera al id de la ruta <br>
+                                <img src="img/integracion/int-22.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Generar un nuevo metodo en <span class="nombre_archivo">crear-producto.component.ts</span> que se encargue de evaluar la accion que es requerida por el usuario <b>editar o crear</b> <br>
+                                <img src="img/integracion/int-23.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Llamar el metodo <code>accionSolicitada</code> dentro del <code>ngOnInit</code> para evaluar la accion solicitada <br>
+                                <img src="img/integracion/int-24.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Hacer la respectiva prueba <br>
+                                <img src="img/integracion/int-25.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Crear el metodo encargado de editar el producto en <span class="nombre_archivo">producto.service.ts</span> <br>
+                                <img src="img/integracion/int-26.png" class="w-100 mt-4">
+                            </li>
+                            <li class="mt-3">
+                                <b>(FRONT)</b> Hacer el respectivo condicional que identificara el proceso que se llevara a cabo <br>
+                                <img src="img/integracion/int-27.png" class="w-100 mt-4">
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ul id="api_data"></ul>
+    <script>
+        consumo_api = () => {
+            let contenedor_data = document.getElementById("api_data")
+            contenedor_data.innerHTML = ""
+            let url_api = "http://localhost:4000/api/productos"
+            let api_pokemon = fetch(url_api)
+            api_pokemon.then(res => res.json())
+                .then(data_productos => {
+                    console.log(data_productos)
+                    for (const data of data_productos) {
+                        console.log(data.nombre)
+                        contenedor_data.innerHTML += `<li>${data.nombre}</li>`
+                    }
+                }).catch(error_pokemon => console.log(error_pokemon))
+        }
+
+        consumo_api()
+    </script>
+</body>
+
+</html>
