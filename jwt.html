@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <title>Seguimiento MEAN</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+
+<body class="bg-dark">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Seguimiento MEAN</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">FrontEnd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="backend.html">BackEnd</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="integracion.html">Integracion</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                          Extras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="jwt.html">JWT Backend</a></li>
+                            <li><a class="dropdown-item" href="jwt-front.html">JWT Frontend</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container my-5">
+        <h2 class="text-white">Configuración JWT</h2>
+        <div class="accordion" id="acordeon_general">
+
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panel-1">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#contenidoPanel-1" aria-expanded="false" aria-controls="contenidoPanel-1">
+                        <b>Configuracion JWT Backend</b>
+                    </button>
+                </h2>
+                <div id="contenidoPanel-1" class="accordion-collapse collapse" aria-labelledby="panel-1">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li class="list-group-item">
+                                Descarga npm de libreria<b>jsonwebtoken</b> <br>
+                                <img src="img/jwt/instalacion.png" class="my-3">
+                            </li>
+                            <li class="list-group-item">
+                                <p>
+                                    RECORDATORIO: <br> Se crea o modifica el modelo al cual se hara referecia o accesara a datos que dependen del JWT
+                                </p><br>
+                                <img src="img/jwt/modelo1.png" class="w-100">
+                            </li>
+                            <li>
+                                <p>
+                                    Se crea la funcion encargada del controlador encargda de crear el usuario la cual tendra que devolver un token de seguridad, <b>este ultimo es opcional para aquellas aplicaciones que no loguearan el usuario despues de registrado</b>                                    <br> Tener en cuenta que en el controlador se debera de solicitar la libreria jsonwebtoken que se guardara en una variable para su posterior uso
+                                </p>
+                                <img src="img/jwt/controlador1.png" class="w-100 my-3">
+                                <img src="img/jwt/ruta1.png" class="w-100">
+                            </li>
+
+                            <li>
+                                <p>Proceder a probar, donde se debera recibir una respuesta con el token generado</p>
+                                <img src="img/jwt/postman1.png" class="w-100">
+                            </li>
+
+                            <li>
+                                <p>
+                                    Se crea funcion encargada de hacer el login en la aplicacion, la cual autorizara al usuario para aquellas secciones que necesiten de alguna validación de identidad
+                                </p>
+                                <img src="img/jwt/controlador2.png" class="w-100 mb-4">
+                                <img src="img/jwt/ruta2.png" class="w-100">
+                            </li>
+                            <li>
+                                <p>
+                                    En este caso para probarlo no se debera de enviar una peticion POST ya que de este dependeremos mas adelante para verificar el token de seguridad con los datos enviados en el cuerpo de la petición
+                                </p>
+                                <img src="img/jwt/postman2.png" class="w-100">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                        <b>Crear funcion encargada de verificar el token generado por el JWT para darle acceso al usuario</b>
+                    </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                        <ol class="list-group list-group-numbered">
+                            <li>
+                                <p>
+                                    Esta funcion se encargara de recibir el token enviado en la peticion para validar la informacion interna con la informacion externa, esta funcion se puede crear en el archivo de rutas o en el controlador, aunque se recomienda que este en rutas ya que
+                                    puede ser usada por diferentes controladores
+                                </p>
+                                <img src="img/jwt/ruta3.png" class="w-100 my-4">
+                                <p>
+                                    Se especifica que ruta dependera del JWT
+                                </p>
+                                <img src="img/jwt/ruta4.png" class="w-100 my-4">
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <hr class="bg-white">
+
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+        <!-- ---------------------------------------------------------------------------------------------------- -->
+
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+    <script>
+        var popoverTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="popover"]'))
+        var popoverList = popoverTriggerList.map(function(popoverTriggerEl) {
+            return new bootstrap.Popover(popoverTriggerEl)
+        })
+    </script>
+</body>
+
+</html>

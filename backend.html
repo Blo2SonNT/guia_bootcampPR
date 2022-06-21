@@ -27,6 +27,15 @@
                     <li class="nav-item">
                         <a class="nav-link" href="integracion.html">Integracion</a>
                     </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Extras
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="jwt.html">JWT Backend</a></li>
+                            <li><a class="dropdown-item" href="jwt-front.html">JWT Frontend</a></li>
+                        </ul>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -209,7 +218,8 @@
                                 <img src="img/back/express-3.png" class="w-25 my-3" alt="">
                             </li>
                             <li>
-                                Crear un archivo nuevo llamado <span class="nombre_archivo">db.js</span> en la ruta <span class="ruta_angular">/config</span> donde se realizara la configuracion respectiva para realizar la conexion a la base de datos <br>
+                                Crear un archivo nuevo llamado <span class="nombre_archivo">db.js</span> en la ruta
+                                <span class="ruta_angular">/config</span> donde se realizara la configuracion respectiva para realizar la conexion a la base de datos <br>
                                 <img src="img/back/express-5.png" class="w-100 my-3" alt="">
                             </li>
                             <li>
@@ -232,7 +242,8 @@
                                 <img src="img/back/express-9.png" class="w-100 my-3" alt="">
                             </li>
                             <li>
-                                Creamos la logica que ira en el archivo de rutas haciendo referencia a los productos <br>
+                                Creamos la logica que ira en el archivo de rutas haciendo referencia a los productos
+                                <br>
                                 <img src="img/back/express-10.png" class="w-100 my-3" alt="">
                             </li>
                             <li>
@@ -241,8 +252,10 @@
                             </li>
                             <li>
                                 testeamos la ruta usando el software de postman. <br>
-                                <b>Si lo testeamos por medio de la aplicacion web se debe de descargar el agente postman para poder hacer las respectivas peticiones</b> <br>
-                                <b>Si se instala no se debe de ejecutar nada extra para el funcionamiento del postman</b> <br>
+                                <b>Si lo testeamos por medio de la aplicacion web se debe de descargar el agente postman
+                                    para poder hacer las respectivas peticiones</b> <br>
+                                <b>Si se instala no se debe de ejecutar nada extra para el funcionamiento del
+                                    postman</b> <br>
                                 <img src="img/back/express-12.png" class="w-100 my-3" alt="">
                             </li>
                             <h5 class="p-3 bg-primary text-white text-center">Mejorando los procesos que se llevaran en las rutas</h5>
@@ -292,8 +305,8 @@
             <div class="accordion-item">
                 <h2 class="accordion-header" id="headiFive">
                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                    <b>Configuracion de modelo - MongooseJS</b>
-                  </button>
+                        <b>Configuracion de modelo - MongooseJS</b>
+                    </button>
                 </h2>
                 <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
                     <div class="accordion-body">
@@ -303,24 +316,29 @@
                                 <img src="img/back/express-23.png" alt="" class="w-25 my-3"> <br>
                             </li>
                             <li>
-                                Crear un archivo llamado <span class="nombre_archivo">Producto.js</span> <b class="text-decoration-underline">Con la inicial en mayuscula donde se indica que es un modelo</b> <br>
+                                Crear un archivo llamado <span class="nombre_archivo">Producto.js</span> <b class="text-decoration-underline">Con la inicial en mayuscula donde se indica que es
+                                    un modelo</b> <br>
                                 <img src="img/back/express-24.png" alt="" class="w-50 my-3"> <br>
                             </li>
                             <li>
                                 Declaramos en <span class="nombre_archivo">Producto.js</span> <b>Modelo de express</b> una variable para requerir los servicios de mongoose, declaramos un esquema que definira los campos que seran recibidos para guardar
-                                en la base de datos y exportamos el modelo para su uso en otros componentes de la API <br>
+                                en la base de datos y exportamos el modelo para su uso en otros componentes de la API
+                                <br>
                                 <img src="img/back/express-25.png" alt="" class="w-100 my-3">
                             </li>
                             <li>
-                                Declaramos el esquema dentro de <code>const ProductoSchema = mongoose.Schema({})</code> <br>
+                                Declaramos el esquema dentro de <code>const ProductoSchema = mongoose.Schema({})</code>
+                                <br>
                                 <p class="my-3">Deben de llamarse igual que como los definimos en el modelo de <span class="text-danger fw-bold">angular</span> (<span class="ruta_angular">src/app/models/producto.ts</span>)<br></p>
                                 <img src="img/back/express-26.png" alt="" class="w-100 my-3">
                             </li>
                             <li>
-                                En el controlador del producto <span class="ruta_angular">controllers/<span class="nombre_archivo">productosController.js</span></span> empezaremos a dar respuesta segun el estado de las peticiones <br>
+                                En el controlador del producto <span class="ruta_angular">controllers/<span
+                                        class="nombre_archivo">productosController.js</span></span> empezaremos a dar respuesta segun el estado de las peticiones <br>
                                 <img src="img/back/express-27.png" class="w-100 my-3" alt="">
                             </li>
-                            <h5 class="p-3 bg-primary text-white text-center">Pruebas para guardar la info en la base de datos</h5>
+                            <h5 class="p-3 bg-primary text-white text-center">Pruebas para guardar la info en la base de datos
+                            </h5>
                             <div class="bg-morado p-5 my-4">
                                 <h4 class="fw-bold mb-3">Configuracion postman para test POST</h4>
                                 <img src="img/back/express-28.png" class="w-100" alt="">
